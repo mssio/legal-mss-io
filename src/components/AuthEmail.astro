@@ -1,0 +1,12 @@
+---
+import { AUTH_CONTACT } from '../data/auth';
+
+interface Props {
+  /** Extra size/color utilities for this spot (e.g. "text-sm"). */
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<a class:list={['text-link font-mono', className]} href={`mailto:${AUTH_CONTACT}`}>{AUTH_CONTACT}</a>
