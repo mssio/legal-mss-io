@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { AUTH_CONTACT, PRIVACY_LAST_UPDATED } from '../../data/auth';
+import { PRIVACY_LAST_UPDATED } from '../../data/auth';
+import AuthEmail from '../../components/AuthEmail.astro';
 import PolicyNav from '../../components/PolicyNav.astro';
 ---
 
@@ -31,7 +32,7 @@ import PolicyNav from '../../components/PolicyNav.astro';
 <strong class="font-medium text-neutral-900 dark:text-white">auth.mss.io</strong> (the "Service") is the sign-in service operated by Mario Stefano Suharja, doing business as MSS, in Calgary, Alberta, Canada ("MSS", "we", "us"). This policy explains what personal information the Service collects when you create an account or sign in, why, and what choices you have.
           </p>
 <p>
-            We handle personal information in line with Alberta's <em>Personal Information Protection Act</em> (PIPA) and, where it applies, the federal <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA). Our privacy contact is reachable at <a class="underline decoration-neutral-300 dark:decoration-neutral-700 underline-offset-4 hover:text-accent dark:hover:text-accent-dark font-mono text-xs sm:text-sm text-neutral-900 dark:text-neutral-100 transition-colors" href={`mailto:${AUTH_CONTACT}`}>{AUTH_CONTACT}</a>.
+            We handle personal information in line with Alberta's <em>Personal Information Protection Act</em> (PIPA) and, where it applies, the federal <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA). Our privacy contact is reachable at <AuthEmail class="underline-offset-4 text-xs sm:text-sm text-neutral-900 dark:text-neutral-100" />.
           </p>
 <p>
             This policy covers the Service only. Each application you sign in to (a "Connected Application") handles the information it receives under its own privacy policy.
@@ -215,10 +216,10 @@ import PolicyNav from '../../components/PolicyNav.astro';
 <li><strong class="text-neutral-900 dark:text-neutral-200 font-medium">Revoke</strong> a Connected Application's access at any time.</li>
 </ul>
 <p class="text-sm">
-            Send requests to <a class="underline decoration-neutral-300 dark:decoration-neutral-700 underline-offset-4 hover:text-accent dark:hover:text-accent-dark font-mono text-xs sm:text-sm text-neutral-900 dark:text-neutral-100 transition-colors" href={`mailto:${AUTH_CONTACT}`}>{AUTH_CONTACT}</a>. We may need to verify your identity first, and we will respond within 30 days, or tell you if we need an extension the law allows.
+            Send requests to <AuthEmail class="underline-offset-4 text-xs sm:text-sm text-neutral-900 dark:text-neutral-100" />. We may need to verify your identity first, and we will respond within 30 days, or tell you if we need an extension the law allows.
           </p>
 <p class="text-sm text-neutral-600 dark:text-neutral-400">
-            If you are not satisfied with our response, you can complain to the <a class="underline decoration-neutral-300 dark:decoration-neutral-700 underline-offset-4 hover:text-accent dark:hover:text-accent-dark text-neutral-900 dark:text-neutral-100 transition-colors" href="https://oipc.ab.ca" rel="noopener noreferrer" target="_blank">Office of the Information and Privacy Commissioner of Alberta</a> or the <a class="underline decoration-neutral-300 dark:decoration-neutral-700 underline-offset-4 hover:text-accent dark:hover:text-accent-dark text-neutral-900 dark:text-neutral-100 transition-colors" href="https://www.priv.gc.ca" rel="noopener noreferrer" target="_blank">Office of the Privacy Commissioner of Canada</a>.
+            If you are not satisfied with our response, you can complain to the <a class="text-link underline-offset-4 text-neutral-900 dark:text-neutral-100" href="https://oipc.ab.ca" rel="noopener noreferrer" target="_blank">Office of the Information and Privacy Commissioner of Alberta</a> or the <a class="text-link underline-offset-4 text-neutral-900 dark:text-neutral-100" href="https://www.priv.gc.ca" rel="noopener noreferrer" target="_blank">Office of the Privacy Commissioner of Canada</a>.
           </p>
 </div>
 </section>
@@ -246,9 +247,7 @@ import PolicyNav from '../../components/PolicyNav.astro';
 <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between py-1 gap-1">
 <dt class="text-neutral-600 dark:text-neutral-400">Privacy questions or requests</dt>
 <dd>
-<a class="text-neutral-900 dark:text-neutral-200 hover:text-accent dark:hover:text-accent-dark underline decoration-neutral-300 dark:decoration-neutral-700 underline-offset-4 font-mono text-xs sm:text-sm transition-colors" href={`mailto:${AUTH_CONTACT}`}>
-                {AUTH_CONTACT}
-              </a>
+<AuthEmail class="text-neutral-900 dark:text-neutral-200 underline-offset-4 text-xs sm:text-sm" />
 </dd>
 </div>
 <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between py-1 gap-1">

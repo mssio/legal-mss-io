@@ -19,6 +19,7 @@ Legal policies for services operated by MSS. A static [Astro](https://astro.buil
 │   └── favicon.svg            # shield icon, follows the OS light/dark setting
 ├── src/
 │   ├── components/
+│   │   ├── AuthEmail.astro    # auth.mss.io contact email link
 │   │   └── PolicyNav.astro    # "Back to Legal" + Terms / Privacy tabs
 │   ├── data/
 │   │   └── auth.ts            # auth.mss.io contact address and "Last updated" dates
@@ -30,7 +31,7 @@ Legal policies for services operated by MSS. A static [Astro](https://astro.buil
 │   │       ├── terms.astro
 │   │       └── privacy.astro
 │   └── styles/
-│       └── global.css         # Tailwind import, fonts, accent colors, dark mode variant
+│       └── global.css         # Tailwind import, fonts, accent colors, dark mode, text-link style
 └── package.json
 ```
 

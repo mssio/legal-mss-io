@@ -10,6 +10,11 @@
   --color-accent-dark: #818cf8;
 }
 
+/* Underlined inline link used in policy text; add size/color utilities per use */
+@utility text-link {
+  @apply underline decoration-neutral-300 dark:decoration-neutral-700 hover:text-accent dark:hover:text-accent-dark transition-colors;
+}
+
 @layer base {
   /* Tailwind v4 dropped the pointer cursor on buttons; the original (v3) had it */
   button:not(:disabled) {

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { AUTH_CONTACT, TERMS_LAST_UPDATED } from '../../data/auth';
+import { TERMS_LAST_UPDATED } from '../../data/auth';
+import AuthEmail from '../../components/AuthEmail.astro';
 import PolicyNav from '../../components/PolicyNav.astro';
 ---
 
@@ -30,7 +31,7 @@ import PolicyNav from '../../components/PolicyNav.astro';
             auth.mss.io (the "Service") is a sign-in and identity service operated by Mario Stefano Suharja, doing business as MSS, based in Calgary, Alberta, Canada ("MSS", "we", "us"). It lets you create an account once and use it to sign in to websites and applications that MSS runs or that rely on MSS for sign-in ("Connected Applications").
           </p>
 <p>
-            By creating an account or signing in through the Service, you agree to these Terms of Use and to our <a class="text-neutral-900 dark:text-neutral-100 underline decoration-neutral-300 dark:decoration-neutral-700 hover:text-accent dark:hover:text-accent-dark transition-colors" href="/auth/privacy">Privacy Policy</a>. If you do not agree, do not use the Service.
+            By creating an account or signing in through the Service, you agree to these Terms of Use and to our <a class="text-link text-neutral-900 dark:text-neutral-100" href="/auth/privacy">Privacy Policy</a>. If you do not agree, do not use the Service.
           </p>
 </div>
 </section>
@@ -49,7 +50,7 @@ import PolicyNav from '../../components/PolicyNav.astro';
 <ul class="list-disc list-outside pl-5 space-y-2">
 <li>Give accurate information when you register, and keep it current.</li>
 <li>Keep your password, recovery codes and multi-factor authentication devices secure, and not share your account.</li>
-<li>Tell us promptly at <a class="font-mono text-sm underline decoration-neutral-300 dark:decoration-neutral-700 hover:text-accent dark:hover:text-accent-dark transition-colors" href={`mailto:${AUTH_CONTACT}`}>{AUTH_CONTACT}</a> if you believe your account has been accessed without permission.</li>
+<li>Tell us promptly at <AuthEmail class="text-sm" /> if you believe your account has been accessed without permission.</li>
 </ul>
 <p>
             You are responsible for activity under your account unless it results from our failure to take reasonable security measures. If you sign in with a third-party account (for example Google, GitHub or Apple), that provider's terms also apply to that account.
@@ -75,7 +76,7 @@ import PolicyNav from '../../components/PolicyNav.astro';
 <div class="p-4 rounded-lg border border-neutral-200/80 dark:border-neutral-800 bg-white dark:bg-[#13161f] text-sm space-y-1">
 <div class="font-semibold text-neutral-900 dark:text-neutral-100">Security reports</div>
 <p class="text-neutral-600 dark:text-neutral-400 leading-normal">
-              If you find a security issue, please report it privately to <a class="font-mono underline decoration-neutral-300 dark:decoration-neutral-700 hover:text-accent dark:hover:text-accent-dark transition-colors" href={`mailto:${AUTH_CONTACT}`}>{AUTH_CONTACT}</a> and give us reasonable time to fix it before disclosure. We will not pursue action against good-faith research that avoids privacy violations, data destruction and service disruption.
+              If you find a security issue, please report it privately to <AuthEmail /> and give us reasonable time to fix it before disclosure. We will not pursue action against good-faith research that avoids privacy violations, data destruction and service disruption.
             </p>
 </div>
 </div>
@@ -107,7 +108,7 @@ import PolicyNav from '../../components/PolicyNav.astro';
             We may change, suspend or discontinue the Service or any feature. Where practical, we will give reasonable notice before discontinuing it entirely.
           </p>
 <p>
-            We may suspend or close your account if you breach these Terms, if your account poses a security risk, or if required by law. You can stop using the Service at any time and ask us to delete your account at <a class="font-mono text-sm underline decoration-neutral-300 dark:decoration-neutral-700 hover:text-accent dark:hover:text-accent-dark transition-colors" href={`mailto:${AUTH_CONTACT}`}>{AUTH_CONTACT}</a>. Sections 6 and 7 survive termination.
+            We may suspend or close your account if you breach these Terms, if your account poses a security risk, or if required by law. You can stop using the Service at any time and ask us to delete your account at <AuthEmail class="text-sm" />. Sections 6 and 7 survive termination.
           </p>
 </div>
 </section>
@@ -147,7 +148,7 @@ import PolicyNav from '../../components/PolicyNav.astro';
             If any part of these Terms is found unenforceable, the rest stays in effect. These Terms and the Privacy Policy are the whole agreement between you and MSS about the Service.
           </p>
 <p>
-            Questions: <a class="font-mono text-sm underline decoration-neutral-300 dark:decoration-neutral-700 hover:text-accent dark:hover:text-accent-dark transition-colors" href={`mailto:${AUTH_CONTACT}`}>{AUTH_CONTACT}</a>, Mario Stefano Suharja, Calgary, Alberta, Canada.
+            Questions: <AuthEmail class="text-sm" />, Mario Stefano Suharja, Calgary, Alberta, Canada.
           </p>
 </div>
 </section>
@@ -160,17 +161,13 @@ import PolicyNav from '../../components/PolicyNav.astro';
 <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between py-1 gap-1">
 <dt class="text-neutral-600 dark:text-neutral-400">Questions about these Terms</dt>
 <dd>
-<a class="text-neutral-900 dark:text-neutral-200 hover:text-accent dark:hover:text-accent-dark underline decoration-neutral-300 dark:decoration-neutral-700 underline-offset-4 font-mono text-xs sm:text-sm transition-colors" href={`mailto:${AUTH_CONTACT}`}>
-                {AUTH_CONTACT}
-              </a>
+<AuthEmail class="text-neutral-900 dark:text-neutral-200 underline-offset-4 text-xs sm:text-sm" />
 </dd>
 </div>
 <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between py-1 gap-1">
 <dt class="text-neutral-600 dark:text-neutral-400">Report a security issue</dt>
 <dd>
-<a class="text-neutral-900 dark:text-neutral-200 hover:text-accent dark:hover:text-accent-dark underline decoration-neutral-300 dark:decoration-neutral-700 underline-offset-4 font-mono text-xs sm:text-sm transition-colors" href={`mailto:${AUTH_CONTACT}`}>
-                {AUTH_CONTACT}
-              </a>
+<AuthEmail class="text-neutral-900 dark:text-neutral-200 underline-offset-4 text-xs sm:text-sm" />
 </dd>
 </div>
 </dl>
