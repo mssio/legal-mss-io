@@ -1,16 +1,83 @@
 ---
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Legal — MSS Policies Hub">
+<!-- Main Content Area -->
+    <main class="flex-1 pt-12 sm:pt-14 space-y-14 sm:space-y-16">
+
+      <!-- Page Title & Scope -->
+      <section>
+        <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 mb-3">
+          Legal
+        </h1>
+        <p class="text-[17px] leading-relaxed text-neutral-600 dark:text-neutral-400">
+          Policies for services operated by MSS, Calgary, Alberta, Canada.
+        </p>
+      </section>
+
+      <!-- Section: auth.mss.io Policies -->
+      <section aria-labelledby="auth-heading" class="space-y-5">
+        <div class="border-b border-neutral-200/80 dark:border-neutral-800 pb-3">
+          <h2 id="auth-heading" class="text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 font-mono">
+            auth.mss.io
+          </h2>
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
+            Our sign-in service for MSS websites and applications.
+          </p>
+        </div>
+
+        <!-- Policy Link Rows -->
+        <div class="divide-y divide-neutral-200/70 dark:divide-neutral-800/80 border border-neutral-200/80 dark:border-neutral-800 rounded-lg overflow-hidden bg-white dark:bg-[#13161f] shadow-xs">
+          
+          <!-- Row 1: Terms of Use -->
+          <a href="/auth/terms" class="group flex items-center justify-between p-5 sm:p-6 transition duration-150 ease-in-out hover:bg-neutral-50 dark:hover:bg-neutral-800/40">
+            <div class="space-y-1.5 pr-4">
+              <div class="flex items-center gap-2.5">
+                <span class="text-base font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">
+                  Terms of Use
+                </span>
+              </div>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-snug">
+                The rules for using your MSS account.
+              </p>
+              <div class="text-xs text-neutral-500 dark:text-neutral-500 pt-0.5">
+                Last updated October 25, 2026
+              </div>
+            </div>
+            
+            <div class="flex-shrink-0 text-neutral-400 group-hover:text-accent dark:group-hover:text-accent-dark group-hover:translate-x-0.5 transition-all">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </a>
+
+          <!-- Row 2: Privacy Policy -->
+          <a href="/auth/privacy" class="group flex items-center justify-between p-5 sm:p-6 transition duration-150 ease-in-out hover:bg-neutral-50 dark:hover:bg-neutral-800/40">
+            <div class="space-y-1.5 pr-4">
+              <div class="flex items-center gap-2.5">
+                <span class="text-base font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-accent dark:group-hover:text-accent-dark transition-colors">
+                  Privacy Policy
+                </span>
+              </div>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-snug">
+                What we collect, why, and your rights under Canadian privacy law.
+              </p>
+              <div class="text-xs text-neutral-500 dark:text-neutral-500 pt-0.5">
+                Last updated October 25, 2026
+              </div>
+            </div>
+
+            <div class="flex-shrink-0 text-neutral-400 group-hover:text-accent dark:group-hover:text-accent-dark group-hover:translate-x-0.5 transition-all">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+    </main>
+</Layout>

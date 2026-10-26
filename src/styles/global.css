@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --color-accent: #4f46e5;
+  --color-accent-dark: #818cf8;
+}
+
+@layer base {
+  /* Tailwind v4 dropped the pointer cursor on buttons; the original (v3) had it */
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* Focus rings & clean accessibility defaults */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+.dark a:focus-visible,
+.dark button:focus-visible {
+  outline: 2px solid #818cf8;
+  outline-offset: 2px;
+}
