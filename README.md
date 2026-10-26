@@ -15,10 +15,13 @@ Legal policies for services operated by MSS. A static [Astro](https://astro.buil
 ```text
 /
 ├── public/
+│   ├── favicon.ico            # fallback for browsers/tools without SVG icons
 │   └── favicon.svg            # shield icon, follows the OS light/dark setting
 ├── src/
 │   ├── components/
 │   │   └── PolicyNav.astro    # "Back to Legal" + Terms / Privacy tabs
+│   ├── data/
+│   │   └── auth.ts            # auth.mss.io contact address and "Last updated" dates
 │   ├── layouts/
 │   │   └── Layout.astro       # header, theme toggle, footer
 │   ├── pages/
@@ -46,9 +49,10 @@ All commands are run from the root of the project:
 
 ## Editing policies
 
-- When a policy changes, update the "Last updated" date in the page subtitle **and** on the matching row of the home page.
+- When a policy changes, update its "Last updated" date in `src/data/auth.ts`. The policy page and the home page both read it from there.
+- The auth.mss.io contact address is also set once in `src/data/auth.ts` (`AUTH_CONTACT`).
 - Use straight quotes (`"`), not curly quotes.
-- The `auth-contact.…@passinbox.com` address belongs to auth.mss.io only. Keep it off the home page and out of other services' pages.
+- The contact address belongs to auth.mss.io only. Keep it off the home page and out of other services' pages.
 
 ## Adding a policy page
 

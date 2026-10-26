@@ -22,8 +22,9 @@ Static legal site for legal.mss.io. It currently hosts the Terms of Use and Priv
 
 - **Policy wording is the owner's.** Don't reword, reorder or "improve" policy text unless asked. When asked for a text change, change only that text.
 - **Straight quotes** (`"`) everywhere. No curly quotes.
-- **"Last updated" dates** appear in each policy page's subtitle and on its row on the home page. Keep them in sync.
-- **The contact email is auth-only.** `auth-contact.…@passinbox.com` belongs on the auth.mss.io pages, never on the home page or another service's pages.
+- **"Last updated" dates** live in `src/data/auth.ts` (`TERMS_LAST_UPDATED`, `PRIVACY_LAST_UPDATED`). Both the policy page subtitles and the home page rows read from there, so never hardcode a date in a page.
+- **The contact email is auth-only.** `AUTH_CONTACT` in `src/data/auth.ts` belongs on the auth.mss.io pages, never on the home page or another service's pages. Use the constant rather than typing the address.
+- **Favicon:** `public/favicon.svg` is the source. `public/favicon.ico` is a fallback rendered from it in the light-mode blue. Regenerate the `.ico` if the SVG changes.
 - **Tailwind v4, installed via `@tailwindcss/vite`.** Never add the Tailwind CDN. Dark mode uses `dark:` utilities, driven by a `dark` class on `<html>`. The only custom colors are `accent` (light) and `accent-dark` (dark mode). Add new tokens to `@theme` in `global.css` only when something uses them.
 - **Theme persistence.** The theme is stored in `localStorage` under `color-theme`. Keep every storage access wrapped in `try/catch`.
 - **Keep it simple.** The site is static, with no UI framework, no content collections and no extra dependencies unless they're needed.

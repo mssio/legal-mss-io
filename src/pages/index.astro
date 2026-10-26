@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { TERMS_LAST_UPDATED, PRIVACY_LAST_UPDATED } from '../data/auth';
 ---
 
 <Layout title="Legal — MSS Policies Hub">
@@ -42,7 +43,7 @@ import Layout from '../layouts/Layout.astro';
                 The rules for using your MSS account.
               </p>
               <div class="text-xs text-neutral-500 dark:text-neutral-500 pt-0.5">
-                Last updated October 25, 2026
+                Last updated {TERMS_LAST_UPDATED}
               </div>
             </div>
             
@@ -65,7 +66,7 @@ import Layout from '../layouts/Layout.astro';
                 What we collect, why, and your rights under Canadian privacy law.
               </p>
               <div class="text-xs text-neutral-500 dark:text-neutral-500 pt-0.5">
-                Last updated October 25, 2026
+                Last updated {PRIVACY_LAST_UPDATED}
               </div>
             </div>
 

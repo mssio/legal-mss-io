@@ -20,11 +20,10 @@
 /* Focus rings & clean accessibility defaults */
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #4f46e5;
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 .dark a:focus-visible,
 .dark button:focus-visible {
-  outline: 2px solid #818cf8;
-  outline-offset: 2px;
+  outline-color: var(--color-accent-dark);
 }
